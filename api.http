@@ -1,1 +1,14 @@
 GET http://localhost:3000
+
+###
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "id": "asset2",
+    "symbol": "A2",
+    "price": 700
+}
+
+###
+GET http://localhost:3000/assets
