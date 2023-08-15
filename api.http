@@ -47,3 +47,19 @@ Content-Type: application/json
     "price": 100,
     "type": "BUY"
 }
+
+###
+GET http://localhost:3000/wallets/wallet1/orders
+
+###
+POST http://localhost:3000/wallets/wallet1/orders/execute
+Content-Type: application/json
+
+{
+    "order_id": "64c9b50e3d275332ac8b7781",
+    "status": "CLOSED",
+    "related_investor_id": "YYYY",
+    "broker_transaction_id": "BBBB",
+    "negotiated_shares": 5,
+    "price": 10
+}
