@@ -23,7 +23,10 @@ export class OrdersController {
   }
 
   @Post('execute')
-  executeTransaction(@Body() body: InputExecuteTransactionDto) {
+  executeTransaction(
+    @Param('wallet_id') wallet_id: string,
+    @Body() body: InputExecuteTransactionDto,
+  ) {
     return this.ordersService.executeTransaction(body);
   }
 }
